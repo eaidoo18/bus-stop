@@ -64,7 +64,7 @@ const Homepage = () => {
 
       {/* <CarDetails /> */}
 
-      <div className="w-full h-48 bg-neutral-800 flex flex-col justify-center items-center gap-y-6 mt-36">
+      <div className="w-full h-48 bg-gray-950 flex flex-col justify-center items-center gap-y-6 mt-36">
         <p className="text-6xl font-extrabold text-white max-[768px]:text-3xl max-[768px]:text-center ">Save more with our affordable price rates!</p>
         <h3 className="text-2xl text-white max-[768px]:text-[1.2rem] ">Providing<span className="text-teal-700">24/7</span> bus availablity for all your tours.</h3>
       </div>

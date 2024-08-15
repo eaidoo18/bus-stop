@@ -1,6 +1,5 @@
 import React from 'react'
 import carimgz from '../assets/carimgz.png'
-import teal from '../assets/teal.png'
 import { IoIosCheckmarkCircleOutline } from 'react-icons/io'
 import { MdArrowForwardIos } from 'react-icons/md'
 
@@ -11,7 +10,7 @@ const Hero = () => {
    <div className="w-full h-[100vh] flex">
       <div className="flex flex-col  gap-y-5 px-[4rem] h-full justify-center  max-[460px]:w-screen">
         <h3 className="font-bold text-2xl ml-[.5rem]  max-[768px]:text-center max-[460px]:w-auto">Book your trip now</h3>
-        <span className="text-[3rem] w-full font-bold max-[768px]:text-center max-[460px]:text-[2.1rem] ">
+        <span className="text-[4rem] w-full font-bold max-[768px]:text-center max-[460px]:text-[2.1rem] ">
           Save <span className="text-teal-700">more</span> with our bus rental.
         </span>
         <p className="text-neutral-700 font-medium max-[768px]:text-center mb-3 max-[460px]:w-full max-[460px]:">
@@ -23,7 +22,7 @@ const Hero = () => {
           <button className="border py-2 px-5 rounded-md flex justify-center items-center gap-2 bg-teal-600 text-white">
             Book Ride <IoIosCheckmarkCircleOutline size={20} />{" "}
           </button>
-          <button className="py-2 px-4 rounded-md flex justify-center items-center gap-2 bg-black text-white hover:border border-black hover:bg-white transition hover:text-black">
+          <button className="py-2 px-4 rounded-md flex justify-center items-center gap-2 bg-gray-950 text-white hover:border border-black hover:bg-white transition hover:text-black">
             Learn More <MdArrowForwardIos size={18} />{" "}
           </button>
         </div>
