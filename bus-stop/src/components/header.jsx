@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Menu,X } from 'lucide-react';
 import { useState } from 'react';
+import { Button } from './ui/button';
 
 export default function Header() {
     const[isMenuOpen,setIsMenuOpen] =useState(false)
@@ -28,24 +29,24 @@ export default function Header() {
         </Link>
         {/* DesktopNav */}
         <nav className=' hidden md:flex items-center space-x-8'>
-         <Link href='/fleet' className='text-gray-700 hover:text-blue-600 transition-colors'>
+         <Link href='/fleet' className='text-gray-700 hover:text-violet-900 transition-colors'>
           Fleet
          </Link>
-         <Link href='/about' className='text-gray-700 hover:text-blue-600 transition-colors'>
+         <Link href='/about' className='text-gray-700 hover:text-violet-900 transition-colors'>
           About
          </Link>
-         <Link href='/safety' className='text-gray-700 hover:text-blue-600 transition-colors'>
+         <Link href='/safety' className='text-gray-700 hover:text-violet-900 transition-colors'>
           Safety
          </Link>
-         <Link href='/blog' className='text-gray-700 hover:text-blue-600 transition-colors'>
+         <Link href='/blog' className='text-gray-700 hover:text-violet-900 transition-colors'>
           Blog
          </Link>
-         <Link href='/contact' className='text-gray-700 hover:text-blue-600 transition-colors'>
+         <Link href='/contact' className='text-gray-700 hover:text-violet-900 transition-colors'>
           contact
          </Link>
-         {/* <Link href='/book'>
-           <Button className='bg-blue-600 hover:bg-blue-700'>Book Now</Button>
-         </Link> */}
+         <Link href='/book'>
+           <Button className='bg-violet-900 hover:bg-violet-700'>Book Now</Button>
+         </Link>
         </nav>
         {/* mobileMenuBtn */}
         <button className="md:hidden" onClick={() => setIsMenuOpen(!isMenuOpen)}>
@@ -61,24 +62,24 @@ export default function Header() {
             exit={{ opacity: 0, height: 0 }}
           >
             <div className="flex flex-col space-y-4">
-              <Link href="/fleet" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Link href="/fleet" className="text-gray-700 hover:text-violet-900 transition-colors">
                 Fleet
               </Link>
-              <Link href="/about" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Link href="/about" className="text-gray-700 hover:text-violet-900 transition-colors">
                 About
               </Link>
-              <Link href="/safety" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Link href="/safety" className="text-gray-700 hover:text-violet-900 transition-colors">
                 Safety
               </Link>
-              <Link href="/blog" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Link href="/blog" className="text-gray-700 hover:text-violet-900 transition-colors">
                 Blog
               </Link>
-              <Link href="/contact" className="text-gray-700 hover:text-blue-600 transition-colors">
+              <Link href="/contact" className="text-gray-700 hover:text-violet-900 transition-colors">
                 Contact
               </Link>
-              {/* <Link href="/book">
-                <Button className="bg-blue-600 hover:bg-blue-700 w-full">Book Now</Button>
-              </Link> */}
+              <Link href="/book">
+                <Button className="bg-violet-900 hover:bg-blue-700 w-full">Book Now</Button>
+              </Link>
             </div>
           </motion.nav>
       )}

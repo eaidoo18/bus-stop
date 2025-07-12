@@ -1,4 +1,8 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    devtools:{
+        enabled: false,
+    },
+};
 
 export default nextConfig;
