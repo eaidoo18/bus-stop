@@ -5,7 +5,10 @@
  import { Footer } from '@/components/footer'
  import Header from '@/components/header'
  import Hero from '@/components/hero'
+ import {Card,CardContent, CardDescription, CardHeader, CardTitle }from '@/components/ui/card'
+ import { Badge } from "@/components/ui/badge"
  import { Button } from '@/components/ui/button'
+ import Link from "next/link"
  import Image from 'next/image';
  
 
@@ -24,31 +27,55 @@ const page = () => {
       name: "Luxury Coach",
       capacity: "45-55 passengers",
       features: ["WiFi", "AC", "Reclining Seats", "Entertainment System"],
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/assets/coach.png",
       price: "From ₵150/hour",
     },
     {
       name: "Mini Bus",
       capacity: "15-25 passengers",
       features: ["AC", "Comfortable Seating", "Storage Space"],
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/assets/mvan.png",
       price: "From ₵80/hour",
     },
     {
       name: "School Bus",
       capacity: "35-70 passengers",
       features: ["Safety First", "Large Capacity", "Cost Effective"],
-      image: "/placeholder.svg?height=300&width=400",
+      image: "/assets/schoolbus.png",
       price: "From ₵60/hour",
     },
     {
-      name: "Party Bus",
-      capacity: "20-40 passengers",
-      features: ["Sound System", "LED Lights", "Bar Area", "Dance Floor"],
-      image: "/placeholder.svg?height=300&width=400",
-      price: "From ₵200/hour",
+      name: "Airport Shuttle",
+      capacity: "12-15 passengers",
+      features: ["AC", "Comfortable Seating", "Storage Space"],
+      image: "/assets/shuttle.png",
+      price: "From ₵120/hour",
     },
   ]
+
+const testimonials = [
+    {
+      name: "Paul Boateng",
+      role: "Event Coordinator",
+      content:
+        "Excellent service! The bus was clean, comfortable, and the driver was professional. Highly recommend for corporate events.",
+      rating: 5,
+    },
+    {
+      name: "Susan Appiah",
+      role: "Wedding Planner",
+      content:
+        "Perfect for our wedding transportation needs. The luxury coach made our guests feel special. Will definitely use again!",
+      rating: 5,
+    },
+    {
+      name: "Idris Adams",
+      role: "School Administrator",
+      content:
+        "Reliable and safe transportation for our school trips. The drivers are experienced and the buses are well-maintained.",
+      rating: 5,
+    },
+  ]  
 
   return (
     <div className='min-h-screen bg-white'>
@@ -78,7 +105,7 @@ const page = () => {
                 animate={isServicesInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                {/* <Card className="h-full hover:shadow-lg transition-shadow duration-300">
+                <Card className="h-full hover:shadow-lg transition-shadow duration-300">
                   <div className="relative h-48 overflow-hidden rounded-t-lg">
                     <Image
                       src={bus.image || "/placeholder.svg"}
@@ -86,10 +113,10 @@ const page = () => {
                       fill
                       className="object-cover transition-transform duration-300 hover:scale-105"
                     />
-                  </div> */}
-                  {/* <CardHeader>
+                  </div>
+                  <CardHeader>
                     <CardTitle className="text-xl">{bus.name}</CardTitle>
-                    <CardDescription className="text-blue-600 font-semibold">{bus.capacity}</CardDescription>
+                    <CardDescription className="text-sky-600 font-semibold">{bus.capacity}</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-3">
@@ -100,13 +127,13 @@ const page = () => {
                           </Badge>
                         ))}
                       </div>
-                      <div className="text-lg font-bold text-blue-600">{bus.price}</div>
-                      <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                      <div className="text-lg font-bold text-sky-600">{bus.price}</div>
+                      <Button className="w-full bg-violet-900 hover:bg-violet-700">
                         <Link href="/book">Book Now</Link>
                       </Button>
                     </div>
                   </CardContent>
-                </Card> */}
+                </Card>
               </motion.div>
             ))}
           </div>
