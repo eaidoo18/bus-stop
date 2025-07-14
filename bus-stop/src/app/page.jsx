@@ -139,6 +139,71 @@ const testimonials = [
           </div>
         </div>
       </section>
+
+      {/* feature section */}
+    <section className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <motion.div
+            className="text-center mb-16"
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Why Choose Us</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              We provide exceptional service with safety and comfort as our top priorities
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                icon: "/assets/shield.png",
+                title: "Safety First",
+                description: "All our buses undergo regular safety inspections and maintenance",
+              },
+              {
+                icon:  "/assets/users.png",
+                title: "Professional Drivers",
+                description: "Experienced and licensed drivers with excellent safety records",
+              },
+              {
+                icon:  "/assets/clock.png",
+                title: "24/7 Service",
+                description: "Round-the-clock availability for all your transportation needs",
+              },
+              {
+                icon:  "/assets/route.png",
+                title: "Flexible Routes",
+                description: "Customizable routes and schedules to fit your specific requirements",
+              },
+            ].map((feature, index) => (
+              <motion.div
+                key={feature.title}
+                className="text-center"
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+              >
+                <div className="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                  {/* <feature.icon className="h-8 w-8 text-blue-600" /> */}
+                  <Image
+                  alt='image'
+                  src={feature.icon}
+                  width={30}
+                  height={30}
+                  />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+      
      <Footer/>
     </div>
   )
