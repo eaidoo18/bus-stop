@@ -1,4 +1,6 @@
+import Header from "@/components/header";
 import "./globals.css";
+import { Footer } from "@/components/footer";
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -22,7 +24,9 @@ export default function RootLayout({ children }) {
         <link href="https://fonts.cdnfonts.com/css/euclid-circular-a" rel="stylesheet"/>       
       </head>
       <body>
+        <Header/>
         {children}
+        <Footer/>
       </body>
     </html>
   );
