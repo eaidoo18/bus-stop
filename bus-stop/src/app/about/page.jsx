@@ -95,7 +95,7 @@ export default function AboutPage() {
             >
               <div className="relative h-96 rounded-lg overflow-hidden">
                 <Image
-                  src="/placeholder.svg?height=400&width=600"
+                  src="/assets/aboutimage.jpeg"
                   alt="Company history"
                   fill
                   className="object-cover"
@@ -106,45 +106,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Timeline */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            className="text-center mb-16"
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Our Journey</h2>
-            <p className="text-xl text-gray-600">Key milestones in our company's growth</p>
-          </motion.div>
-
-          <div className="max-w-4xl mx-auto">
-            {milestones.map((milestone, index) => (
-              <motion.div
-                key={milestone.year}
-                className="flex items-center mb-8 last:mb-0"
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="flex-shrink-0 w-24 text-right mr-8">
-                  <Badge variant="outline" className="text-blue-600 border-blue-600">
-                    {milestone.year}
-                  </Badge>
-                </div>
-                <div className="flex-shrink-0 w-4 h-4 bg-blue-600 rounded-full mr-8"></div>
-                <div className="flex-grow">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{milestone.event}</h3>
-                  <p className="text-gray-600">{milestone.description}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* Team Section */}
       <section className="py-20">

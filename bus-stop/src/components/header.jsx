@@ -20,10 +20,10 @@ export default function Header() {
         <div className='flex items-center justify-between'>
         <Link href="/" className="flex items-center space-x-2">
           <Image
-            src="/assets/logonew.png"
+            src="/assets/recentlg.png"
             alt="logo"
-            width={50}
-            height={50}
+            width={60}
+            height={60}
             priority
           />
         </Link>
