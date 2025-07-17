@@ -38,9 +38,7 @@ export default function Header() {
          <Link href='/safety' className='text-gray-700 hover:text-violet-900 transition-colors'>
           Safety
          </Link>
-         <Link href='/blog' className='text-gray-700 hover:text-violet-900 transition-colors'>
-          Blog
-         </Link>
+        
          <Link href='/contact' className='text-gray-700 hover:text-violet-900 transition-colors'>
           contact
          </Link>
